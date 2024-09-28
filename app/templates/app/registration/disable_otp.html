@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Disable Two-Factor Authentication</h2>
+  <form method="post" action="{% url 'disable_otp' %}">
+    {% csrf_token %}
+    <p>Enter your TOTP token to disable 2FA:</p>
+    {{ form.as_p }}
+    <button type="submit">Disable 2FA</button>
+  </form>
+{% endblock %}

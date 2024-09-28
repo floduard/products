@@ -1,0 +1,11 @@
+www.brvn.work.gd {
+    reverse_proxy web:5000 {
+        # Optional settings for WebSocket upgrades
+        header_up Upgrade {>Upgrade}
+        header_up Connection {>Connection}
+    }
+}
+
+http://www.brvn.work.gd {
+    redir https://www.brvn.work.gd{uri} 301
+}

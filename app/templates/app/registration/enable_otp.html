@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Enable Two-Factor Authentication</h2>
+  <form method="post" action="{% url 'enable_otp' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Enable 2FA</button>
+  </form>
+{% endblock %}

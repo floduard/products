@@ -1,0 +1,38 @@
+{% extends 'app/base.html' %}   
+{% load static %}
+
+{% block title %}Category{% endblock %}
+
+{% block main-content %}
+
+<div class="contact-us">
+    <div class="section" id="contact">
+        <h2>Contact Us</h2>
+        <p>We'd love to hear from you! Please fill out the form below or reach out to us through our contact details.</p>
+        <form class="contact-form" action="#" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+ </div>
+ <!-- Additional Contact Options -->
+ <div class="contact-options">
+     <div class="contact-option">
+        <i class="fab fa-whatsapp"></i>
+        <p>WhatsApp: <a href="https://wa.me/1234567890">+1 234 567 890</a></p>
+     </div>
+     <div class="contact-option">
+        <i class="fas fa-phone-alt"></i>
+        <p>phone: <a href="tel:+1234567890">+1 234 567 890</a></p>
+     </div>
+ </div>
+
+{% endblock main-content %}

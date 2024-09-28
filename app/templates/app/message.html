@@ -1,0 +1,23 @@
+{% extends 'app/base.html' %}   
+{% load static %}
+
+{% block title %}Category{% endblock %}
+
+{% block main-content %}
+<div class="contact-us">
+    <div class="section" id="contact">
+        <h1>Email Box</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Send</button>
+        </form>
+        {% if messages %}
+            {% for message in messages %}
+                <div>{{ message }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+</div>
+
+{% endblock main-content %}
